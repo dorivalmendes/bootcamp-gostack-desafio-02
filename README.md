@@ -47,7 +47,7 @@ Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma 
 “Não espere para plantar, apenas tenha paciência para colher”!
 
 ## Comentários
-Para este desafio foi escolhido o bando de dados MySQL, abaixo algumas instruções para instalação e configuração no caso de algum erro de acesso/conexão:
+Para este desafio foi escolhido o banco de dados MySQL. Abaixo seguem algumas instruções para instalação e configuração do container e do MySQL:
 
 - Docker Hub
 https://hub.docker.com/_/mysql
