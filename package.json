@@ -6,7 +6,8 @@
   "author": "Dorival Mendes <dori.mendes@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon ./src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "debug": "node --inspect-brk -r sucrase/register src/server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

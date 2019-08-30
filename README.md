@@ -45,3 +45,44 @@ Esse desafio **não precisa ser entregue** e não receberá correção, mas voc�
 Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
 
 “Não espere para plantar, apenas tenha paciência para colher”!
+
+## Comentários
+Para este desafio foi escolhido o bando de dados MySQL, abaixo algumas instruções para instalação e configuração no caso de algum erro de acesso/conexão:
+
+- Docker Hub
+https://hub.docker.com/_/mysql
+
+- Instalação
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=docker -p  3306:3306 -d mysql
+
+- Pós instalação
+Acessar o console do MySQL:
+docker exec -it mysql bash
+mysql -u root -p
+
+- Criar um novo usuário:
+CREATE USER 'meetapp'@'172%'
+IDENTIFIED BY 'docker';
+
+- Atribuir permissões ao novo usuário:
+GRANT ALL
+ON *.*
+TO 'meetapp'@'172%'
+WITH GRANT OPTION;
+
+- Alteração necessária para logar no DBeaver:
+ALTER USER 'meetapp'@'172%' IDENTIFIED WITH mysql_native_password BY 'docker';
+
+- Outros comandos apenas para consulta:
+SHOW GRANTS FOR 'meetapp'@'172%';
+
+REVOKE ALL
+ON *.*
+FROM 'meetapp'@'172%';
+
+DROP USER 'meetapp'@'172%';
+
+- DBeaver - Configuração adicional 
+allowPublicKeyRetrieval: true
+connectTimeout: 20000
+useSSL: false
