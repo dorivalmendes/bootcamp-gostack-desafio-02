@@ -82,7 +82,7 @@ FROM 'meetapp'@'172%';
 
 DROP USER 'meetapp'@'172%';
 
-- DBeaver - Configuração adicional 
+- DBeaver - Configuração adicional
 allowPublicKeyRetrieval: true
 connectTimeout: 20000
 useSSL: false
